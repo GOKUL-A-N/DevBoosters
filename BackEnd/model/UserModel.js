@@ -18,23 +18,29 @@ const userSchema = mongoose.Schema({
         type: 'String',
         default: ''
     },
-    skills: {
-        type: 'Array',
-        default: [],
-    },
-    histroy: {
-        type: 'Array',
-        default: [],
-    },
-    jobPosting: {
-        type: 'Array',
-        default: []
-    },
+    skills:[
+        {
+            type:String
+        }
+    ],
+    history: [
+        {
+            type: String
+        }
+    ],
+    jobPosting: [
+        {
+            type: String
+        }
+    ],
     role : {
         type: 'String',
-        required: true
+        default: ''
     },
-    
+    openTo : {
+        type: 'String',
+        default: ''
+    }
 },{
     timestamps: true,
     collection: 'devUsers'

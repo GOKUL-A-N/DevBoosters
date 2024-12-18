@@ -20,6 +20,10 @@ const postSchema = mongoose.Schema({
     author: {
         type: Schema.Types.ObjectId,
         required: true
+    },
+    tags: {
+        type: 'Array',
+        default: []
     }
 },{
     timestamps: true,
