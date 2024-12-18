@@ -4,6 +4,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import http from 'http';
 import dotenv from 'dotenv';
+import { userRouter } from './router/UserRouter.js';
 
 const app = express();
 
@@ -13,6 +14,7 @@ dotenv.config()
 
 app.use(express.json());
 
+app.use('/user',userRouter);
 
 app.get('/', (req,res) => {
     res.status(200).send("Welcome back chief!")
