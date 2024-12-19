@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { addSkillsController, loginUserController, registerUserController, removeSkillsController, showProfileController } from "../controller/UserController.js";
+import { addAboutController, addSkillsController, loginUserController, registerUserController, removeSkillsController, showProfileController } from "../controller/UserController.js";
 
 export const userRouter = express.Router();
 
@@ -18,3 +18,7 @@ userRouter.delete('/removeskills',removeSkillsController);
 
 // router to show profile
 userRouter.get('/:id',showProfileController);
+
+// router to add about  
+userRouter.post('/about',addAboutController);
+

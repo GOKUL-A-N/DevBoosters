@@ -1,4 +1,4 @@
-import mongoose, { Collection, Schema } from 'mongoose';
+import mongoose from 'mongoose';
 
 const postSchema = mongoose.Schema({
     title:{
@@ -9,25 +9,27 @@ const postSchema = mongoose.Schema({
         type: 'String',
         required:  true,
     },
-    skills: {
-        type: 'Array',
-        default: []
-    },
+    skills: [
+        {
+            type: String
+        }
+    ],
     interested: {
         type: 'Array',
         default: []
     },
     author: {
-        type: Schema.Types.ObjectId,
+        type: "String",
         required: true
     },
-    tags: {
-        type: 'Array',
-        default: []
-    }
+    tags: [
+        {
+            type: String
+        }
+    ]
 },{
     timestamps: true,
     collection: 'devPosts'  
 })
 
-export const postModel = mongoose.model(postSchema)
+export const postModel = mongoose.model('postSchema',postSchema)
