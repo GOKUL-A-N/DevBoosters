@@ -14,12 +14,14 @@ const postSchema = mongoose.Schema({
             type: String
         }
     ],
-    interested: {
-        type: 'Array',
-        default: []
-    },
+    interested: [
+        {
+            type: String
+        }
+    ],
     author: {
-        type: "String",
+        type: mongoose.Types.ObjectId,
+        ref:'userSchema',
         required: true
     },
     tags: [
