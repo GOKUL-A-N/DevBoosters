@@ -2,3 +2,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-color: #000;
+    color: #fff;
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient(45deg,#18e5f8,#07ff87 ,#13f287);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.bg-gradient{
+    background: -webkit-linear-gradient(45deg,#009eac,#07ff87 ,#13f287);
+}

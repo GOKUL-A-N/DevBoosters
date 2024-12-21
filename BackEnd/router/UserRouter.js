@@ -21,4 +21,3 @@ userRouter.get('/:id',showProfileController);
 
 // router to add about  
 userRouter.post('/about',addAboutController);
-
