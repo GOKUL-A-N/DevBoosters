@@ -36,3 +36,5 @@ Thumbs.db
 
 #env files
 /BackEnd/.env
+
+/BackEnd/node_modules

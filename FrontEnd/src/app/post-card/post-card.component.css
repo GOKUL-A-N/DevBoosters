@@ -1,0 +1,16 @@
+.card {
+  border-radius: 5px;
+  background-color: #000;
+  transition: all ease;
+  color: rgba(181, 181, 181, 0.8);
+  cursor: pointer;
+  border-width:0.1px;
+  border-color: rgba(181, 181, 181, 0.8);
+  z-index: 5;
+}
+
+.card:hover {
+  filter: drop-shadow(0 0 0px rgba(64, 64, 64, 0.6));
+  color: #fff;
+  border-color: #fff;
+}
