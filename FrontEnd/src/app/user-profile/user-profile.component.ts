@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })
