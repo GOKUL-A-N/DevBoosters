@@ -1,13 +1,10 @@
-<div class="flex p-3 mt-0 flex-col items-center sm:p-5 md:py-10">
-    <div>
-        <button class="px-4 py-2 bg-[#13f287] cursor-pointer text-[#000] font-semibold text-[20px] border-[1px] rounded-sm mr-4">Latest</button><button class="px-4 py-2 cursor-pointer border-[#13f287] text-[#13f287] font-semibold text-[20px] border-[1px] rounded-sm">Most Interested</button>
-    </div>
-    <div class="mt-10 flex w-full p-1 md:p-10 flex-wrap gap-4">
-        <app-post-card></app-post-card>
-        <app-post-card></app-post-card>
-        <app-post-card></app-post-card>
-        <app-post-card></app-post-card>
-        <app-post-card></app-post-card>
-        <app-post-card></app-post-card>
-    </div>
+<div class="flex w-full items-center justify-center gap-2 p-3 flex-col">
+  <div class="md:w-1/2 w-auto gap-4 flex flex-col">
+    <button class="font-semibold text-start w-[100px] cursor-pointer">Interested <span><i class="fa-solid ml-1 fa-caret-down cursor-pointer"></i></span></button>
+    <app-post-card></app-post-card>
+    <app-post-card></app-post-card>
+    <app-post-card></app-post-card>
+    <app-post-card></app-post-card>
+    <app-post-card></app-post-card>
+  </div>
 </div>
