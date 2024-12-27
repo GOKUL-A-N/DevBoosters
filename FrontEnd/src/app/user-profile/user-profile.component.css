@@ -1,0 +1,9 @@
+.hidden-element {
+    display: none;
+}
+
+.parent-element:hover 
+.hidden-element {
+    display: inline-block;
+    cursor: pointer;
+}
