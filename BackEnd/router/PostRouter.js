@@ -1,5 +1,5 @@
 import express from 'express';
-import { createPostController , showPosts , addInterestToPostsController , mostIntrestedPosts , deletePostsController} from '../controller/PostController.js';
+import { createPostController , showPosts , addInterestToPostsController , mostIntrestedPosts , deletePostsController , deleteInterestController} from '../controller/PostController.js';
 
 export const postRouter = express.Router();
 
@@ -17,3 +17,5 @@ postRouter.get('/popular',mostIntrestedPosts);
 
 // delete posts rotuter
 postRouter.delete('/delete/:id', deletePostsController);
+
+postRouter.delete('/deleteInterest',deleteInterestController);

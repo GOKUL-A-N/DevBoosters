@@ -114,3 +114,34 @@ export const deletePostsController = async (req, res) => {
         });
     }
 };
+
+// deleting the interest
+export const deleteInterestController = async (req, res) => {
+    try {
+        const {postId , userId} =await req.body;
+
+        if(!postId ||!userId){
+            return res.status(400).send({
+                message: "Post ID and User ID are required",
+            });
+        }
+
+        const post = await postModel.findByIdAndUpdate(postId, { $pull: { interested: userId } }, { new: true });
+
+        if(!post){
+            return res.status(404).send({
+                message: "Post not found",
+            });
+        }
+
+        return res.status(200).send({
+            message: "Successfully updated post",
+            post,
+        });
+    } catch (err) {
+        res.status(500).send({
+            message: "Cannot delete interest to post",
+            err,
+        });
+    }
+}
